@@ -1,4 +1,3 @@
-
 # API-PULL-VIA-AIRFLOW-TO-SNOWFLAKE-WITH-STREAMLIT-VISUALIZATION
 
 ## Overview
@@ -9,6 +8,41 @@ This project provides an end-to-end solution that:
 - **Visualizes the data interactively** with a Streamlit dashboard.
 
 The system is designed to update data automatically on a scheduled basis, ensuring that the visualizations always reflect the latest information.
+
+## Workflow
+
+Below is a high-level workflow diagram illustrating the process:
+
+```mermaid
+flowchart TD
+    A[Airflow Scheduler Triggers DAG] --> B[Fetch API Data Task]
+    B --> C[Load Data into Snowflake Task]
+    C --> D[Snowflake Data Updated]
+    D --> E[Streamlit App Queries Snowflake]
+    E --> F[Interactive Dashboard Displays Data]
+```
+
+**Workflow Description:**
+1. **Airflow Scheduler Triggers DAG:**  
+   The Airflow scheduler initiates the DAG at the configured interval (daily by default).
+
+2. **Fetch API Data Task:**  
+   The DAG fetches data from a public API.
+
+3. **Load Data into Snowflake Task:**  
+   The fetched data is loaded into a Snowflake table, updating the warehouse with the latest information.
+
+4. **Snowflake Data Updated:**  
+   With the new data available in Snowflake, the dataset becomes the source for our visualizations.
+
+5. **Streamlit App Queries Snowflake:**  
+   The Streamlit dashboard directly connects to Snowflake to retrieve the updated data.
+
+6. **Interactive Dashboard Displays Data:**  
+   The Streamlit app displays:
+   - A full data table.
+   - Analysis of average immunization measures by region and year.
+   - A grouped histogram showing performance over the years with custom colors.
 
 ## Project Structure
 
@@ -37,7 +71,7 @@ project_root/
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/API-PULL-VIA-AIRFLOW-TO-SNOWFLAKE-WITH-STREAMLIT-VISUALIZATION.git
+   git clone https://github.com/waitambatha/API-PULL-VIA-AIRFLOW-TO-SNOWFLAKE-WITH-STREAMLIT-VISUALIZATION.git
    cd API-PULL-VIA-AIRFLOW-TO-SNOWFLAKE-WITH-STREAMLIT-VISUALIZATION
    ```
 
@@ -78,7 +112,7 @@ project_root/
    ```
 
 3. **Monitor the DAG:**
-   The DAG is scheduled to run daily (by default) to fetch API data and load it into Snowflake.
+   The DAG is scheduled to run daily (by default) to fetch data and load it into Snowflake.
 
 ### Running the Streamlit App
 
