@@ -1,0 +1,341 @@
+[2025-02-19T07:05:40.693+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_snowflake.load_data_to_snowflake scheduled__2025-02-18T07:05:01.301104+00:00 [queued]>
+[2025-02-19T07:05:40.706+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_snowflake.load_data_to_snowflake scheduled__2025-02-18T07:05:01.301104+00:00 [queued]>
+[2025-02-19T07:05:40.706+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2025-02-19T07:05:40.723+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): load_data_to_snowflake> on 2025-02-18 07:05:01.301104+00:00
+[2025-02-19T07:05:40.729+0000] {standard_task_runner.py:57} INFO - Started process 69 to run task
+[2025-02-19T07:05:40.733+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'api_to_snowflake', 'load_data_to_snowflake', 'scheduled__2025-02-18T07:05:01.301104+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/api_to_snowflake.py', '--cfg-path', '/tmp/tmpk9k6af5s']
+[2025-02-19T07:05:40.735+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask load_data_to_snowflake
+[2025-02-19T07:05:40.798+0000] {task_command.py:410} INFO - Running <TaskInstance: api_to_snowflake.load_data_to_snowflake scheduled__2025-02-18T07:05:01.301104+00:00 [running]> on host a5ad21395fb4
+[2025-02-19T07:05:40.898+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your-email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_to_snowflake' AIRFLOW_CTX_TASK_ID='load_data_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2025-02-18T07:05:01.301104+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-18T07:05:01.301104+00:00'
+[2025-02-19T07:05:40.915+0000] {connection.py:287} INFO - Snowflake Connector for Python Version: 3.0.3, Python Version: 3.7.16, Platform: Linux-6.10.11-linuxkit-x86_64-with-debian-11.7
+[2025-02-19T07:05:40.917+0000] {connection.py:990} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-02-19T07:05:40.918+0000] {connection.py:1007} INFO - Setting use_openssl_only mode to False
+[2025-02-19T07:05:42.399+0000] {cursor.py:800} INFO - query: [CREATE OR REPLACE TABLE your_table (region VARCHAR, region_code VARCHAR, period ...]
+[2025-02-19T07:05:42.768+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:42.769+0000] {cursor.py:956} INFO - Number of results in first chunk: 1
+[2025-02-19T07:05:42.770+0000] {cursor.py:800} INFO - query: [COMMIT]
+[2025-02-19T07:05:43.007+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:43.008+0000] {cursor.py:956} INFO - Number of results in first chunk: 1
+[2025-02-19T07:05:43.009+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:44.029+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:44.030+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:44.722+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:44.723+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:45.439+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:45.440+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:45.952+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:45.952+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:46.771+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:46.772+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:47.590+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:47.591+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:48.063+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:48.064+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:49.127+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:49.128+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:49.638+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:49.639+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:50.150+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:50.151+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:50.662+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:50.663+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:59.059+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:59.060+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:05:59.571+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:05:59.572+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:00.083+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:00.084+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:00.595+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:00.595+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:01.107+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:01.108+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:01.619+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:01.620+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:02.235+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:02.236+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:02.746+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:02.747+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:03.259+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:03.260+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:03.770+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:03.770+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:04.282+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:04.283+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:04.793+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:04.794+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:05.305+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:05.306+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:05.819+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:05.820+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:06.330+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:06.331+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:06.842+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:06.845+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:07.353+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:07.354+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:07.866+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:07.867+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:08.377+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:08.378+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:08.890+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:08.891+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:09.504+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:09.504+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:10.401+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:10.402+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:10.937+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:10.938+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:11.449+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:11.450+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:11.962+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:11.964+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:12.577+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:12.578+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:13.087+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:13.088+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:13.600+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:13.601+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:14.112+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:14.113+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:14.624+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:14.625+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:15.136+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:15.137+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:15.750+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:15.751+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:16.263+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:16.263+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:16.775+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:16.776+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:17.287+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:17.288+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:17.799+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:17.800+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:18.311+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:18.312+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:18.823+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:18.824+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:19.335+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:19.335+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:19.847+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:19.847+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:20.359+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:20.360+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:20.769+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:20.769+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:21.281+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:21.281+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:21.793+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:21.793+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:22.304+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:22.305+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:22.817+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:22.817+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:23.842+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:23.842+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:24.352+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:24.353+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:24.865+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:24.865+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:25.376+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:25.377+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:25.889+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:25.889+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:26.400+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:26.401+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:27.015+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:27.016+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:27.527+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:27.527+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:28.142+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:28.143+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:28.653+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:28.654+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:29.165+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:29.166+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:29.677+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:29.677+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:30.189+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:30.190+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:30.701+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:30.702+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:31.214+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:31.215+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:31.725+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:31.726+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:32.228+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:32.229+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:32.749+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:32.750+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:33.261+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:33.262+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:33.774+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:33.774+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:34.288+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:34.292+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:34.797+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:34.798+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:35.309+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:35.310+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:35.821+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:35.822+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:36.334+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:36.334+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:36.948+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:36.949+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:37.460+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:37.461+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:37.972+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:37.973+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:38.484+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:38.484+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:38.996+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:38.997+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:39.507+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:39.508+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:40.019+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:40.020+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:40.532+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:40.532+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:41.044+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:41.044+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:41.658+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:41.659+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:42.211+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:42.211+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:42.682+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:42.683+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:43.194+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:43.194+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:43.706+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:43.707+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:44.217+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:44.442+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:44.935+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:44.935+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:45.447+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:45.448+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:45.958+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:45.959+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:46.471+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:46.471+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:46.983+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:46.984+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:47.495+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:47.496+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:48.008+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:48.009+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:48.519+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:48.520+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:49.236+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:49.236+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:49.850+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:49.851+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:50.362+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:50.363+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:50.875+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:50.875+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:51.386+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:51.387+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:51.898+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:51.899+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:52.923+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:52.924+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:53.434+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:53.434+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:54.048+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:54.049+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:54.561+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:54.562+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:55.073+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:55.074+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:55.584+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:55.585+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:06:56.186+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:06:56.187+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:04.596+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:04.597+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:05.108+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:05.109+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:05.619+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:05.622+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:06.132+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:06.134+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:06.644+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:06.645+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:07.156+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:07.157+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:07.667+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:07.668+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:08.154+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:08.155+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:08.691+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:08.692+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:09.204+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:09.205+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:09.818+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:09.818+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:10.408+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:10.409+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:10.944+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:10.945+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:11.559+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:11.560+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:12.174+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:12.175+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:12.788+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:12.789+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:13.314+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:13.314+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:13.812+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:13.813+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:14.323+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:14.324+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:14.733+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:14.734+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:15.347+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:15.348+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:15.860+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:15.861+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:16.373+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:16.374+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:16.884+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:16.885+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:17.398+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:17.399+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:17.908+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:17.909+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:18.377+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:18.378+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:18.830+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:18.831+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:19.342+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:19.343+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:19.957+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:19.957+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:20.469+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:20.470+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:20.980+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:20.980+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:21.801+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:21.802+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:22.619+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:22.620+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:23.131+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:23.132+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:23.643+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:23.643+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:24.155+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:24.156+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region, region_code, period, atleast_one_measure, immuni...]
+[2025-02-19T07:07:24.667+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:24.667+0000] {cursor.py:800} INFO - query: [INSERT INTO your_table (region) VALUES ('');]
+[2025-02-19T07:07:25.178+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:25.179+0000] {cursor.py:800} INFO - query: [COMMIT]
+[2025-02-19T07:07:25.487+0000] {cursor.py:813} INFO - query execution done
+[2025-02-19T07:07:25.488+0000] {cursor.py:956} INFO - Number of results in first chunk: 1
+[2025-02-19T07:07:25.488+0000] {connection.py:586} INFO - closed
+[2025-02-19T07:07:25.702+0000] {connection.py:589} INFO - No async queries seem to be running, deleting session
+[2025-02-19T07:07:26.000+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-02-19T07:07:26.013+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=api_to_snowflake, task_id=load_data_to_snowflake, execution_date=20250218T070501, start_date=20250219T070540, end_date=20250219T070726
+[2025-02-19T07:07:26.039+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2025-02-19T07:07:26.059+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
